@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:examenfinal/screens/proyecto1/proyecto1_app.dart';
 import 'package:examenfinal/screens/proyecto2/proyecto2_app.dart';
+import 'package:examenfinal/screens/proyecto3/proyecto3_app.dart';
 
 void main() {
   runApp(const MenuPrincipalApp());
@@ -63,6 +64,20 @@ class HomeScreen extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(builder: (context) => Proyecto2App()),
+                  );
+                },
+              ),
+               const SizedBox(height: 20),
+              _buildProjectCard(
+                context,
+                title: 'Proyecto 3',
+                description: 'Contador de Clicks',
+                icon: Icons.dashboard,
+                color: const Color.fromARGB(255, 233, 45, 229),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Proyecto3App()),
                   );
                 },
               ),
